@@ -599,6 +599,192 @@ Author: Azora Optical Solutions Inc.
 }
 
 /* ═══════════════════════════════════
+   PAGE CONTENT — body text for inner pages
+═══════════════════════════════════ */
+.ao-page-content {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: left;
+}
+.ao-page-content .ao-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.ao-body-text {
+  font-size: 17px;
+  color: var(--mid);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.ao-body-text:last-child { margin-bottom: 0; }
+
+/* ═══════════════════════════════════
+   INDUSTRY CARDS — About page
+═══════════════════════════════════ */
+.ao-industry-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 36px 28px;
+  text-align: left;
+  transition: border-color .2s;
+}
+.ao-industry-card:hover { border-color: rgba(255,255,255,0.2); }
+.ao-industry-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+.ao-industry-card p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════
+   CONTACT CARDS — Contact page
+═══════════════════════════════════ */
+.ao-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.ao-contact-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 44px 36px;
+  text-align: left;
+}
+.ao-contact-card-title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+.ao-contact-card-desc {
+  font-size: 15px;
+  color: var(--mid);
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+/* ═══════════════════════════════════
+   CONTACT FORM
+═══════════════════════════════════ */
+.ao-form-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.ao-form {
+  text-align: left;
+}
+.ao-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.ao-form-field {
+  margin-bottom: 20px;
+}
+.ao-form-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--dark);
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+}
+.ao-form-field input,
+.ao-form-field select,
+.ao-form-field textarea {
+  width: 100%;
+  font-family: var(--font);
+  font-size: 16px;
+  color: var(--dark);
+  background: var(--gray);
+  border: 1.5px solid transparent;
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: border-color .2s, background .2s;
+  outline: none;
+  -webkit-appearance: none;
+}
+.ao-form-field input:focus,
+.ao-form-field select:focus,
+.ao-form-field textarea:focus {
+  border-color: var(--blue);
+  background: #fff;
+}
+.ao-form-field textarea { resize: vertical; }
+.ao-form-field select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2386868B' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+/* ═══════════════════════════════════
+   LEGAL PAGES — Privacy & Terms
+═══════════════════════════════════ */
+.ao-legal-content {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: left;
+}
+.ao-legal-content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--dark);
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+.ao-legal-content h2:first-child { margin-top: 0; }
+.ao-legal-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+.ao-legal-content p {
+  font-size: 16px;
+  color: var(--mid);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.ao-legal-content ul {
+  margin-bottom: 16px;
+  padding-left: 24px;
+  list-style: disc;
+}
+.ao-legal-content li {
+  font-size: 16px;
+  color: var(--mid);
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+.ao-legal-content a {
+  color: var(--blue);
+  transition: opacity .2s;
+}
+.ao-legal-content a:hover { text-decoration: underline; }
+
+/* ═══════════════════════════════════
+   RESPONSIVE — Inner pages
+═══════════════════════════════════ */
+@media (max-width: 680px) {
+  .ao-contact-grid { grid-template-columns: 1fr; }
+  .ao-form-row { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════
    SMOOTH SCROLL
 ═══════════════════════════════════ */
 html { scroll-behavior: smooth; scroll-padding-top: 60px; }
